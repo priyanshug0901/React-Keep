@@ -1,0 +1,13 @@
+.cards-container {
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: [col1] 25% [col2] 25% [col3] 25% [col4] 25%;
+}
+
+.main {
+  align-content: center;
+}
+.home-page {
+  display: flex;
+  justify-content: space-around;
+}

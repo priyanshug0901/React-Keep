@@ -1,0 +1,56 @@
+.takeNote-parent {
+  width: 40vw;
+  background-color: #fff;
+  border-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+  /* box-shadow: -2px 2px 2px 2px rgb(134, 132, 132); */
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%), 0 -0px 5px rgb(0 0 0 / 20%);
+}
+
+.note-Title {
+  outline: none;
+  width: 100%;
+  border: none;
+  margin: 5px;
+  margin-bottom: 15px;
+  /* border: 2px solid rebeccapurple; */
+}
+
+.note-Details {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 5px;
+  border: none;
+  /* border: 2px solid rebeccapurple; */
+}
+.note-Details {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+  outline: none;
+}
+
+.note-Details[contenteditable]:empty::before {
+  content: "Take a note...";
+  color: gray;
+}
+
+.form-icons-container {
+  /* margin-right: 18px; */
+  border-radius: 10px;
+  padding: 3px;
+}
+.form-icons {
+  padding: 3px;
+  color: #202124;
+  margin-right: 15px;
+}
+.form-icons:hover {
+  border-radius: 20px;
+  background-color: rgba(201, 199, 199, 0.363);
+}
