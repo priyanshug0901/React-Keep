@@ -1,14 +1,19 @@
 * {
-  margin: 0;
+  /* margin: 5px; */
+  /* background-color: rgb(158, 248, 123); */
+  border: 1px solid red;
+  box-sizing: border-box;
 }
 
 .body {
   display: grid;
-  grid-template-columns: 296px 1fr;
+  grid-template-columns: 250px 1fr;
 }
-hr {
+
+/* hr {
   border-top: 1px solid #f1f1f1;
-}
+} */
+
 .App {
-  width: 100vw;
+  /* width: 100vw; */
 }

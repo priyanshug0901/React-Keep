@@ -29,7 +29,7 @@
   display: block;
   width: 100%;
   overflow: hidden;
-  resize: both;
+  resize: none;
   min-height: 40px;
   line-height: 20px;
   outline: none;
@@ -49,8 +49,8 @@
   padding: 3px;
   color: #202124;
   margin-right: 15px;
+  border-radius: 20px;
 }
 .form-icons:hover {
-  border-radius: 20px;
   background-color: rgba(201, 199, 199, 0.363);
 }
