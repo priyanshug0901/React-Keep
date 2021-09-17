@@ -5,44 +5,28 @@ import Modal from "../modal/Modal";
 import "./content.css";
 
 export default function Content() {
-  const [cardShow, setCardShow] = useState(true);
+  const [showModal, setModalShow] = useState(false);
 
-  function cardClickHandler() {
+  function openModal() {
     console.log("clicked");
-    setCardShow(false);
-  }
-  function modalClickHandler() {
-    console.log("clicked");
-
-    setCardShow(false);
+    setModalShow((prev) => !prev);
   }
 
   let arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-  let cards = (
-    <div className="cards-container">
-      {arr.map((ind) => {
-        return cardShow ? (
-          <Card onClick={cardClickHandler} />
-        ) : (
-          <Modal onClick={modalClickHandler} />
-        );
-      })}
-    </div>
-  );
 
   return (
     <div className="home-page">
       <div className="input-form">
         <TakeNote />
       </div>
+
       <div className="cards-container">
-        {arr.map((ind) => {
-          return cardShow ? (
-            <Modal onClick={() => setCardShow(true)} />
-          ) : (
-            <Card onClick={() => setCardShow(false)} />
-          );
-        })}
+        {arr.map((ind) => (
+          <>
+            <Card onClick={openModal} />
+            <Modal showModal={showModal} setShowModal={setModalShow} />
+          </>
+        ))}
       </div>
     </div>
   );

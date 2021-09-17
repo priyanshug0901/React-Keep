@@ -1,6 +1,6 @@
 .card-main {
   border: 1px solid black;
-  width: 250px;
+  width: 50%;
   background-color: #fff;
   border-color: #e0e0e0;
   padding: 10px;
@@ -8,6 +8,10 @@
   box-shadow: 0 3px 5px rgb(0 0 0 / 20%), 0 -0px 5px rgb(0 0 0 / 20%);
   margin: 10px;
   box-sizing: border-box;
+  position: absolute;
+  height: 50%;
+  top: 40%;
+  left: 27%;
 }
 .card-title {
   box-sizing: border-box;
