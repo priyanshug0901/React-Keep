@@ -1,0 +1,18 @@
+/* .palette{
+  position: absolute;
+} */
+/* .palette-container{
+  position: relative;
+  width: auto;
+  height: auto;
+  top: 28px;
+  left: 67px;
+  background-color: white;
+} */
+.btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 15px;
+  border: none;
+  margin: 1px;
+}

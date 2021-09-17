@@ -1,5 +1,5 @@
 import "./card.css";
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   AddAlertOutlined,
   ArchiveOutlined,
@@ -7,11 +7,20 @@ import {
   MoreVertRounded,
   PaletteOutlined
 } from "@material-ui/icons";
+import ColorPalette from "./colorPalette/ColorPalette";
+
 export default function Card(props) {
+  const [Palette, setPalette] = useState(false);
+  let backColor = useRef();
+  function backColorHandler(e) {
+    backColor.current.style.backgroundColor = e.target.style.backgroundColor;
+  }
   return (
-    <div onClick={props.onClick} className="card-main">
-      <div className="card-title">Title</div>
-      <div className="card-description">
+    <div ref={backColor} className="cards-main">
+      <div onClick={props.onClick} className="card-title">
+        Title
+      </div>
+      <div onClick={props.onClick} className="card-description">
         Hello, my name is priyanshu. Hello, my name is priyanshu. Hello, my name
         is priyanshu. Hello, my name is priyanshu.Hello, my name is
         priyanshu.Hello, my name is priyanshu.Hello, my name is priyanshu.Hello,
@@ -22,7 +31,14 @@ export default function Card(props) {
         <AddAlertOutlined className="card-icons" />
         <ArchiveOutlined className="card-icons" />
         <ImageOutlined className="card-icons" />
-        <PaletteOutlined className="card-icons" />
+        <div onClick={() => setPalette((state) => !state)}>
+          <PaletteOutlined className="card-icons palette-icon" />
+          {Palette && (
+            <div className="palette-container">
+              <ColorPalette changeBack={backColorHandler} />
+            </div>
+          )}
+        </div>{" "}
         <MoreVertRounded className="card-icons" />
       </div>
     </div>
